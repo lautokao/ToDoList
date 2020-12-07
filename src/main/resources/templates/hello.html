@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html th:lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="?lang=en_US"> English</a>
+<a href="?lang=zh_CN"> 簡中</a>
+<a href="" th:href="@{/shop}"> 店鋪</a>
+<h1 th:text="#{welcome}"></h1>
+<h2 th:text="${hello}"></h2>
+<p th:if="${gender} == 'male'">我是男生</p>
+<p th:if="${gender} == 'female'">我是女生</p>
+
+<ul th:each="i:${list}">
+    <!--將i渲染至畫面-->
+    <li th:text="${i}">
+    </li>
+</ul>
+
+<ul th:each="shop:${listShop}">
+    <!--將i渲染至畫面-->
+    <li th:text="${shop.number}+' '+${shop.name}">
+    </li>
+</ul>
+
+<h2>Add Form</h2>
+<form action="#" th:action="@{/add}" th:object="${shop}" method="post">
+    <input type="number" th:field="*{number}"/>
+    <input type="password" th:field="*{name}"/>
+    <input type="submit"/>
+</form>
+
+</body>
+</html>
