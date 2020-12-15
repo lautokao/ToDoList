@@ -20,7 +20,7 @@
   
 ### 功能
 - i18n
-- Dataase setup
+- Database setup
 - RESTful Api
 - Thymeleaf
 - Logging
