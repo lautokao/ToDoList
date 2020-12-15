@@ -19,3 +19,11 @@
   * org.junit.jupiter:junit-jupiter-api
   
 ### 功能
+- i18n
+- Dataase setup
+- RESTful Api
+- Thymeleaf
+- Logging
+- Unit Test
+- Document
+- Lombok
